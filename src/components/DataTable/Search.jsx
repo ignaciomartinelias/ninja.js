@@ -1,7 +1,6 @@
 import React from 'react'
 
-const Search = (props) => {
-  const { onSearch } = props
+const Search = ({ onSearch }) => {
 
   return (
     <div className="p-b-1">
@@ -9,7 +8,7 @@ const Search = (props) => {
         type="search"
         className="form-control"
         placeholder="Søg brugere"
-        onChange={onSearch.bind(this)} />
+        onChange={onSearch} />
     </div>
   )
 }
