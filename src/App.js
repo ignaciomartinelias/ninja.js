@@ -17,5 +17,3 @@ class App extends Component {
 }
 
 export default App;
-
-// Note: Also considered adding internationalization as well as a bundler config like webpack or parcel
