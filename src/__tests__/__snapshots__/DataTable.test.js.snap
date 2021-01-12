@@ -1,0 +1,203 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot DataTable Component 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <DataTable
+    locale="da"
+    rowsPerPage={5}
+  >
+    <div>
+      <Search
+        onSearch={[Function]}
+      >
+        <div
+          className="p-b-1"
+        >
+          <input
+            className="form-control"
+            onChange={[Function]}
+            placeholder="Søg brugere"
+            type="search"
+          />
+        </div>
+      </Search>
+      <table>
+        <tbody>
+          <Row
+            key="1"
+            row={
+              Object {
+                "edit_path": "http://google.com",
+                "email": "MadsLKlausen@jourrapide.com",
+                "name1": "Mads L. Klausen",
+                "per_id": 1,
+              }
+            }
+          >
+            <tr>
+              <td>
+                <a
+                  href="http://google.com"
+                >
+                  Mads L. Klausen
+                </a>
+                <br />
+                <small>
+                  MadsLKlausen@jourrapide.com
+                </small>
+              </td>
+            </tr>
+          </Row>
+          <Row
+            key="2"
+            row={
+              Object {
+                "edit_path": "http://google.com",
+                "email": "AlfredKKrogh@armyspy.com",
+                "name1": "Alfred K. Krogh",
+                "per_id": 2,
+              }
+            }
+          >
+            <tr>
+              <td>
+                <a
+                  href="http://google.com"
+                >
+                  Alfred K. Krogh
+                </a>
+                <br />
+                <small>
+                  AlfredKKrogh@armyspy.com
+                </small>
+              </td>
+            </tr>
+          </Row>
+          <Row
+            key="3"
+            row={
+              Object {
+                "edit_path": "http://google.com",
+                "email": "SilasLBertelsen@armyspy.com",
+                "name1": "Silas L. Bertelsen",
+                "per_id": 3,
+              }
+            }
+          >
+            <tr>
+              <td>
+                <a
+                  href="http://google.com"
+                >
+                  Silas L. Bertelsen
+                </a>
+                <br />
+                <small>
+                  SilasLBertelsen@armyspy.com
+                </small>
+              </td>
+            </tr>
+          </Row>
+          <Row
+            key="4"
+            row={
+              Object {
+                "edit_path": "http://google.com",
+                "email": "MiaAJohnsen@dayrep.com",
+                "name1": "Mia A. Johnsen",
+                "per_id": 4,
+              }
+            }
+          >
+            <tr>
+              <td>
+                <a
+                  href="http://google.com"
+                >
+                  Mia A. Johnsen
+                </a>
+                <br />
+                <small>
+                  MiaAJohnsen@dayrep.com
+                </small>
+              </td>
+            </tr>
+          </Row>
+          <Row
+            key="5"
+            row={
+              Object {
+                "edit_path": "http://google.com",
+                "email": "AlfredSSchou@jourrapide.com",
+                "name1": "Alfred S. Schou",
+                "per_id": 5,
+              }
+            }
+          >
+            <tr>
+              <td>
+                <a
+                  href="http://google.com"
+                >
+                  Alfred S. Schou
+                </a>
+                <br />
+                <small>
+                  AlfredSSchou@jourrapide.com
+                </small>
+              </td>
+            </tr>
+          </Row>
+        </tbody>
+      </table>
+      <Pagination>
+        <ul
+          className="pagination"
+        >
+          <Page
+            key="0"
+            pageNumber={0}
+          >
+            <li
+              className="page-item mr-1"
+            >
+              <button
+                className="page-link button-outline"
+                onClick={[Function]}
+              >
+                1
+              </button>
+            </li>
+          </Page>
+          <Page
+            key="1"
+            pageNumber={1}
+          >
+            <li
+              className="page-item mr-1"
+            >
+              <button
+                className="page-link "
+                onClick={[Function]}
+              >
+                2
+              </button>
+            </li>
+          </Page>
+        </ul>
+      </Pagination>
+    </div>
+  </DataTable>
+</Provider>
+`;

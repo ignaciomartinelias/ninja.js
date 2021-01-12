@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <Provider store={store}>
         <div className='container mt-3'>
-          <DataTable locale='da' rowsPerPage={5} rows={this.props.rows} />
+          <DataTable locale='da' rowsPerPage={5} />
         </div>
       </Provider>
     );
@@ -17,3 +17,5 @@ class App extends Component {
 }
 
 export default App;
+
+// Note: Also considered adding internationalization as well as a bundler config like webpack or parcel

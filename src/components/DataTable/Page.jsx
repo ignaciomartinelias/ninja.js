@@ -17,7 +17,7 @@ const Page = ({ pageNumber }) => {
   return (
     <li className="page-item mr-1">
       <button
-        className={`page-link ${isActivePage && 'button-outline'}`}
+        className={`page-link ${isActivePage ? 'button-outline' : ''}`}
         onClick={changeToPageNumber} >
         {renderedPageNumber}
       </button>
