@@ -3,12 +3,12 @@ import { setCurrentPageNumber } from '../../actions/dataTableActions'
 import { useSelector } from 'react-redux'
 import store from '../../store'
 
-const Page = ({ pageNumber }) => {
+const Page = ({ pageNumber, text }) => {
 
   const currentPageNumber = useSelector(state => state.dataTableReducer.currentPageNumber)
 
   const isActivePage = currentPageNumber === pageNumber;
-  const renderedPageNumber = pageNumber + 1;
+  const renderedPageNumber = text ? text : pageNumber + 1;
 
   const changeToPageNumber = () => {
     store.dispatch(setCurrentPageNumber(pageNumber))

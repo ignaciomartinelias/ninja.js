@@ -5,6 +5,7 @@ import Page from './Page'
 const Pagination = () => {
 
   const totalNumberOfPages = useSelector(state => state.dataTableReducer.totalNumberOfPages)
+  const currentPageNumber = useSelector(state => state.dataTableReducer.currentPageNumber)
 
   const pages =
     [...Array(totalNumberOfPages)]
@@ -17,7 +18,9 @@ const Pagination = () => {
   return (
     totalNumberOfPages > 1 &&
     <ul className="pagination">
+      {currentPageNumber - 1 >= 0 && <Page pageNumber={currentPageNumber - 1} text={'Prev'}/>}
       {pages}
+      {currentPageNumber + 1 < totalNumberOfPages && <Page pageNumber={currentPageNumber + 1} text={'Next'}/>}
     </ul>
   )
 }

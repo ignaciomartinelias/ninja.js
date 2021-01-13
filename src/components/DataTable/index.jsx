@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import store from '../../store'
-import { setCurrentPageNumber, setTotalNumberOfPages, fetchData } from '../../actions/dataTableActions'
+import { setCurrentPageNumber, setTotalNumberOfPages } from '../../actions/dataTableActions'
 
 import Pagination from './Pagination'
 import Row from './Row'
@@ -10,6 +10,7 @@ import Search from './Search'
 const DataTable = ({ rowsPerPage }) => {
     const rows = useSelector(state => state.dataTableReducer.rows)
     const currentPageNumber = useSelector(state => state.dataTableReducer.currentPageNumber)
+    const totalNumberOfPages = useSelector(state => state.dataTableReducer.totalNumberOfPages)
 
     const [filteredRows, setFilteredRows] = useState([])
     const [rowsToRender, setRowsToRender] = useState([])
@@ -33,18 +34,14 @@ const DataTable = ({ rowsPerPage }) => {
     }
 
     useEffect(() => {
-        const totalNumberOfPages = rowsPerPage === 0 ? 0 : Math.ceil(filteredRows.length / rowsPerPage)
-        store.dispatch(setTotalNumberOfPages(totalNumberOfPages))
+        const numberOfPages = rowsPerPage === 0 ? 0 : Math.ceil(filteredRows.length / rowsPerPage)
+        numberOfPages !== totalNumberOfPages && store.dispatch(setTotalNumberOfPages(numberOfPages))
         setRowsToRender(filteredRows.slice(...rowsInPageNumber(currentPageNumber)))
     }, [filteredRows, currentPageNumber])
 
     useEffect(() => {
         setFilteredRows(rows)
     }, [rows])
-
-    useEffect(() => {
-        store.dispatch(fetchData())
-    }, [])
 
     return (
         <div>
