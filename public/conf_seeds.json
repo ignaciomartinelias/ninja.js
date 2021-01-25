@@ -1,0 +1,68 @@
+[
+  {
+    "title": "Test JS Summit",
+    "date": "28/01/2021",
+    "location": "",
+    "id": 1
+  },
+  {
+    "title": "UX & Product CONF",
+    "date": "04/02/2021",
+    "location": "",
+    "id": 2
+  },
+  {
+    "title": "Developer Week",
+    "date": "17/02/2021",
+    "location": "",
+    "id": 5
+  },
+  {
+    "title": "Product Con",
+    "date": "18/02/2021",
+    "location": "",
+    "id": 4
+  },
+  {
+    "title": "JS World Conference",
+    "date": "22/02/2021",
+    "location": "",
+    "id": 3
+  },
+  {
+    "title": "VueJS Amsterdam",
+    "date": "26/02/2021",
+    "location": "Amsterdam, Netherlands",
+    "id": 6
+  },
+  {
+    "title": "Reactive Conf",
+    "date": "08/03/2021",
+    "location": "Prague, Czech Republic",
+    "id": 7
+  },
+  {
+    "title": "Worldwide Software Architecture Summit",
+    "date": "26/01/2021",
+    "location": "",
+    "id": 8
+  },
+  {
+    "title": "React Summit Remote Edition",
+    "date": "14/04/2021",
+    "location": "",
+    "id": 9
+  },
+  {
+    "title": "Agile Meets Architecture",
+    "date": "10/03/2021",
+    "location": "Berlin, Germany",
+    "id": 10
+  },
+  {
+    "title": "Woman In Tech Summit",
+    "date": "24/03/2021",
+    "location": "",
+    "id": 11
+  }
+]

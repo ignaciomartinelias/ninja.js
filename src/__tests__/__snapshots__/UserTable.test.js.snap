@@ -1,0 +1,283 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Snapshot UserTable Component 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <UserTable>
+    <DataTable
+      RowToRender={[Function]}
+      handleSearch={[Function]}
+      rows={
+        Array [
+          Object {
+            "edit_path": "http://google.com",
+            "email": "MadsLKlausen@jourrapide.com",
+            "name1": "Mads L. Klausen",
+            "per_id": 1,
+          },
+          Object {
+            "edit_path": "http://google.com",
+            "email": "AlfredKKrogh@armyspy.com",
+            "name1": "Alfred K. Krogh",
+            "per_id": 2,
+          },
+          Object {
+            "edit_path": "http://google.com",
+            "email": "SilasLBertelsen@armyspy.com",
+            "name1": "Silas L. Bertelsen",
+            "per_id": 3,
+          },
+          Object {
+            "edit_path": "http://google.com",
+            "email": "MiaAJohnsen@dayrep.com",
+            "name1": "Mia A. Johnsen",
+            "per_id": 4,
+          },
+          Object {
+            "edit_path": "http://google.com",
+            "email": "AlfredSSchou@jourrapide.com",
+            "name1": "Alfred S. Schou",
+            "per_id": 5,
+          },
+          Object {
+            "edit_path": "http://google.com",
+            "email": "MadsLKlausen@jourrapide.com",
+            "name1": "Mads L. Klausen",
+            "per_id": 6,
+          },
+          Object {
+            "edit_path": "http://google.com",
+            "email": "AlfredKKrogh@armyspy.com",
+            "name1": "Alfred K. Krogh",
+            "per_id": 7,
+          },
+          Object {
+            "edit_path": "http://google.com",
+            "email": "SilasLBertelsen@armyspy.com",
+            "name1": "Silas L. Bertelsen",
+            "per_id": 8,
+          },
+          Object {
+            "edit_path": "http://google.com",
+            "email": "MiaAJohnsen@dayrep.com",
+            "name1": "Mia A. Johnsen",
+            "per_id": 9,
+          },
+          Object {
+            "edit_path": "http://google.com",
+            "email": "AlfredSSchou@jourrapide.com",
+            "name1": "Alfred S. Schou",
+            "per_id": 10,
+          },
+        ]
+      }
+      rowsPerPage={5}
+    >
+      <div>
+        <Search
+          onSearch={[Function]}
+        >
+          <div
+            className="p-b-1"
+          >
+            <input
+              className="form-control"
+              onChange={[Function]}
+              placeholder="Søg brugere"
+              type="search"
+            />
+          </div>
+        </Search>
+        <table>
+          <tbody>
+            <UserRow
+              row={
+                Object {
+                  "edit_path": "http://google.com",
+                  "email": "MadsLKlausen@jourrapide.com",
+                  "name1": "Mads L. Klausen",
+                  "per_id": 1,
+                }
+              }
+            >
+              <tr>
+                <td>
+                  <a
+                    href="http://google.com"
+                  >
+                    Mads L. Klausen
+                  </a>
+                  <br />
+                  <small>
+                    MadsLKlausen@jourrapide.com
+                  </small>
+                </td>
+              </tr>
+            </UserRow>
+            <UserRow
+              row={
+                Object {
+                  "edit_path": "http://google.com",
+                  "email": "AlfredKKrogh@armyspy.com",
+                  "name1": "Alfred K. Krogh",
+                  "per_id": 2,
+                }
+              }
+            >
+              <tr>
+                <td>
+                  <a
+                    href="http://google.com"
+                  >
+                    Alfred K. Krogh
+                  </a>
+                  <br />
+                  <small>
+                    AlfredKKrogh@armyspy.com
+                  </small>
+                </td>
+              </tr>
+            </UserRow>
+            <UserRow
+              row={
+                Object {
+                  "edit_path": "http://google.com",
+                  "email": "SilasLBertelsen@armyspy.com",
+                  "name1": "Silas L. Bertelsen",
+                  "per_id": 3,
+                }
+              }
+            >
+              <tr>
+                <td>
+                  <a
+                    href="http://google.com"
+                  >
+                    Silas L. Bertelsen
+                  </a>
+                  <br />
+                  <small>
+                    SilasLBertelsen@armyspy.com
+                  </small>
+                </td>
+              </tr>
+            </UserRow>
+            <UserRow
+              row={
+                Object {
+                  "edit_path": "http://google.com",
+                  "email": "MiaAJohnsen@dayrep.com",
+                  "name1": "Mia A. Johnsen",
+                  "per_id": 4,
+                }
+              }
+            >
+              <tr>
+                <td>
+                  <a
+                    href="http://google.com"
+                  >
+                    Mia A. Johnsen
+                  </a>
+                  <br />
+                  <small>
+                    MiaAJohnsen@dayrep.com
+                  </small>
+                </td>
+              </tr>
+            </UserRow>
+            <UserRow
+              row={
+                Object {
+                  "edit_path": "http://google.com",
+                  "email": "AlfredSSchou@jourrapide.com",
+                  "name1": "Alfred S. Schou",
+                  "per_id": 5,
+                }
+              }
+            >
+              <tr>
+                <td>
+                  <a
+                    href="http://google.com"
+                  >
+                    Alfred S. Schou
+                  </a>
+                  <br />
+                  <small>
+                    AlfredSSchou@jourrapide.com
+                  </small>
+                </td>
+              </tr>
+            </UserRow>
+          </tbody>
+        </table>
+        <Pagination
+          currentPageNumber={0}
+          totalNumberOfPages={2}
+        >
+          <ul
+            className="pagination"
+          >
+            <Page
+              key="0"
+              pageNumber={0}
+            >
+              <li
+                className="page-item mr-1"
+              >
+                <button
+                  className="page-link button-outline"
+                  onClick={[Function]}
+                >
+                  1
+                </button>
+              </li>
+            </Page>
+            <Page
+              key="1"
+              pageNumber={1}
+            >
+              <li
+                className="page-item mr-1"
+              >
+                <button
+                  className="page-link "
+                  onClick={[Function]}
+                >
+                  2
+                </button>
+              </li>
+            </Page>
+            <Page
+              pageNumber={1}
+              text=">"
+            >
+              <li
+                className="page-item mr-1"
+              >
+                <button
+                  className="page-link "
+                  onClick={[Function]}
+                >
+                  &gt;
+                </button>
+              </li>
+            </Page>
+          </ul>
+        </Pagination>
+      </div>
+    </DataTable>
+  </UserTable>
+</Provider>
+`;

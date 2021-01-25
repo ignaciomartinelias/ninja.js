@@ -3,14 +3,16 @@ import { mount } from "enzyme";
 import configureStore from "redux-mock-store";
 import { Provider } from "react-redux";
 import toJson from "enzyme-to-json";
-import DataTable from "../components/DataTable";
+import UserTable from "../components/UserTable/UserTable";
 
 const mockStore = configureStore();
 const store = mockStore({
   dataTableReducer: {
     currentPageNumber: 0,
     totalNumberOfPages: 2,
-    rows: [
+  },
+  userReducer: {
+    users: [
       {
         name1: "Mads L. Klausen",
         email: "MadsLKlausen@jourrapide.com",
@@ -78,7 +80,7 @@ const store = mockStore({
 it("renders 5 rows", () => {
   const wrapper = mount(
     <Provider store={store}>
-      <DataTable locale='da' rowsPerPage={5} />
+      <UserTable />
     </Provider>
   );
   expect(wrapper.find("tr").length).toBe(5);
@@ -87,7 +89,7 @@ it("renders 5 rows", () => {
 it("filters rows based on input", () => {
   const wrapper = mount(
     <Provider store={store}>
-      <DataTable locale='da' rowsPerPage={5} />
+      <UserTable />
     </Provider>
   );
 
@@ -98,18 +100,18 @@ it("filters rows based on input", () => {
 it("generates 2 pages and first page is active", () => {
   const wrapper = mount(
     <Provider store={store}>
-      <DataTable locale='da' rowsPerPage={5} />
+      <UserTable />
     </Provider>
   );
   const pageButtons = wrapper.find("Pagination Page");
-  expect(pageButtons.length).toBe(2);
+  expect(pageButtons.length).toBe(3); // 2 per page plus the next button
   expect(pageButtons.at(0).find("button").prop("className")).toContain("button-outline");
 });
 
-it("Snapshot DataTable Component", () => {
+it("Snapshot UserTable Component", () => {
   const wrapper = mount(
     <Provider store={store}>
-      <DataTable locale='da' rowsPerPage={5} />
+      <UserTable />
     </Provider>
   );
   expect(toJson(wrapper)).toMatchSnapshot();

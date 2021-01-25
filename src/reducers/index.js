@@ -1,6 +1,10 @@
 import { combineReducers } from 'redux';
-import DataTableReducer from './dataTableReducer';
+import userReducer from './userReducer';
+import confReducer from './confReducer';
+import dataTableReducer from './dataTableReducer';
 
 export default combineReducers({
-    dataTableReducer: DataTableReducer
+    userReducer, 
+    dataTableReducer,
+    confReducer
 });
