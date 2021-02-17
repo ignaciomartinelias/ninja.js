@@ -1,33 +1,21 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
-import { setCurrentPageNumber, setTotalNumberOfPages } from "../../actions/dataTableActions";
+import { setCurrentPageNumber } from "../../actions/dataTableActions";
 import store from "../../store";
 import Pagination from "./Pagination";
 import Search from "./Search";
 
 const DataTable = ({ rows, rowsPerPage = 40, handleSearch, RowToRender }) => {
   const currentPageNumber = useSelector(state => state.dataTableReducer.currentPageNumber);
-  const totalNumberOfPages = useSelector(state => state.dataTableReducer.totalNumberOfPages);
+  const [text, setText] = useState('');
 
-  const [filteredRows, setFilteredRows] = useState(rows);
-
-  useEffect(() => {
-    const numberOfPages = rowsPerPage === 0 ? 0 : Math.ceil(filteredRows.length / rowsPerPage);
-    numberOfPages !== totalNumberOfPages && store.dispatch(setTotalNumberOfPages(numberOfPages));
-  }, [filteredRows, rowsPerPage]);
-
-  useEffect(() => {
-    setFilteredRows(rows);
-  }, [rows]);
-
-  const search = event => {
-    const text = event.target.value;
+  const getFilteredRows = () => {
     let rowsFound = rows;
     if (text) {
       rowsFound = handleSearch(rows, text);
+      store.dispatch(setCurrentPageNumber(0));
     }
-    setFilteredRows(rowsFound);
-    store.dispatch(setCurrentPageNumber(0));
+    return rowsFound;
   };
 
   const rowsInPageNumber = pageNumber => {
@@ -35,11 +23,13 @@ const DataTable = ({ rows, rowsPerPage = 40, handleSearch, RowToRender }) => {
     return [startIndex, startIndex + rowsPerPage];
   };
 
+  const filteredRows = getFilteredRows();
+  const numberOfPages = rowsPerPage === 0 ? 0 : Math.ceil(filteredRows.length / rowsPerPage);
   const rowsToRender = filteredRows.slice(...rowsInPageNumber(currentPageNumber));
 
   return (
     <div>
-      {handleSearch && <Search onSearch={search} />}
+      {handleSearch && <Search onSearch={e => setText(e.target.value)} />}
       <table>
         <tbody>
           {rowsToRender.map(row => (
@@ -47,7 +37,7 @@ const DataTable = ({ rows, rowsPerPage = 40, handleSearch, RowToRender }) => {
           ))}
         </tbody>
       </table>
-      <Pagination currentPageNumber={currentPageNumber} totalNumberOfPages={totalNumberOfPages}/>
+      <Pagination currentPageNumber={currentPageNumber} numberOfPages={numberOfPages} />
     </div>
   );
 };

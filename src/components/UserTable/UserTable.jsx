@@ -11,7 +11,7 @@ const UserTable = () => {
   const handleSearch = (users, text) => {
     return users.filter(
       user =>
-        user.name1.toLowerCase().includes(text.toLowerCase()) || user.email.toLowerCase().includes(text.toLowerCase())
+        user.name.toLowerCase().includes(text.toLowerCase()) || user.email.toLowerCase().includes(text.toLowerCase())
     );
   };
 
@@ -19,7 +19,7 @@ const UserTable = () => {
     store.dispatch(fetchUserList());
   }, []);
 
-  return <DataTable rows={users} rowsPerPage={5} handleSearch={handleSearch} RowToRender={Row} />;
+  return <DataTable rows={users} rowsPerPage={4} handleSearch={handleSearch} RowToRender={Row} />;
 };
 
 export default UserTable;
