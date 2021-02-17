@@ -22,66 +22,66 @@ exports[`Snapshot UserTable Component 1`] = `
           Object {
             "edit_path": "http://google.com",
             "email": "MadsLKlausen@jourrapide.com",
-            "name1": "Mads L. Klausen",
-            "per_id": 1,
+            "id": 1,
+            "name": "Mads L. Klausen",
           },
           Object {
             "edit_path": "http://google.com",
             "email": "AlfredKKrogh@armyspy.com",
-            "name1": "Alfred K. Krogh",
-            "per_id": 2,
+            "id": 2,
+            "name": "Alfred K. Krogh",
           },
           Object {
             "edit_path": "http://google.com",
             "email": "SilasLBertelsen@armyspy.com",
-            "name1": "Silas L. Bertelsen",
-            "per_id": 3,
+            "id": 3,
+            "name": "Silas L. Bertelsen",
           },
           Object {
             "edit_path": "http://google.com",
             "email": "MiaAJohnsen@dayrep.com",
-            "name1": "Mia A. Johnsen",
-            "per_id": 4,
+            "id": 4,
+            "name": "Mia A. Johnsen",
           },
           Object {
             "edit_path": "http://google.com",
             "email": "AlfredSSchou@jourrapide.com",
-            "name1": "Alfred S. Schou",
-            "per_id": 5,
+            "id": 5,
+            "name": "Alfred S. Schou",
           },
           Object {
             "edit_path": "http://google.com",
             "email": "MadsLKlausen@jourrapide.com",
-            "name1": "Mads L. Klausen",
-            "per_id": 6,
+            "id": 6,
+            "name": "Mads L. Klausen",
           },
           Object {
             "edit_path": "http://google.com",
             "email": "AlfredKKrogh@armyspy.com",
-            "name1": "Alfred K. Krogh",
-            "per_id": 7,
+            "id": 7,
+            "name": "Alfred K. Krogh",
           },
           Object {
             "edit_path": "http://google.com",
             "email": "SilasLBertelsen@armyspy.com",
-            "name1": "Silas L. Bertelsen",
-            "per_id": 8,
+            "id": 8,
+            "name": "Silas L. Bertelsen",
           },
           Object {
             "edit_path": "http://google.com",
             "email": "MiaAJohnsen@dayrep.com",
-            "name1": "Mia A. Johnsen",
-            "per_id": 9,
+            "id": 9,
+            "name": "Mia A. Johnsen",
           },
           Object {
             "edit_path": "http://google.com",
             "email": "AlfredSSchou@jourrapide.com",
-            "name1": "Alfred S. Schou",
-            "per_id": 10,
+            "id": 10,
+            "name": "Alfred S. Schou",
           },
         ]
       }
-      rowsPerPage={5}
+      rowsPerPage={4}
     >
       <div>
         <Search
@@ -93,7 +93,7 @@ exports[`Snapshot UserTable Component 1`] = `
             <input
               className="form-control"
               onChange={[Function]}
-              placeholder="Søg brugere"
+              placeholder="Search"
               type="search"
             />
           </div>
@@ -101,20 +101,19 @@ exports[`Snapshot UserTable Component 1`] = `
         <table>
           <tbody>
             <UserRow
+              key="1"
               row={
                 Object {
                   "edit_path": "http://google.com",
                   "email": "MadsLKlausen@jourrapide.com",
-                  "name1": "Mads L. Klausen",
-                  "per_id": 1,
+                  "id": 1,
+                  "name": "Mads L. Klausen",
                 }
               }
             >
               <tr>
                 <td>
-                  <a
-                    href="http://google.com"
-                  >
+                  <a>
                     Mads L. Klausen
                   </a>
                   <br />
@@ -125,20 +124,19 @@ exports[`Snapshot UserTable Component 1`] = `
               </tr>
             </UserRow>
             <UserRow
+              key="2"
               row={
                 Object {
                   "edit_path": "http://google.com",
                   "email": "AlfredKKrogh@armyspy.com",
-                  "name1": "Alfred K. Krogh",
-                  "per_id": 2,
+                  "id": 2,
+                  "name": "Alfred K. Krogh",
                 }
               }
             >
               <tr>
                 <td>
-                  <a
-                    href="http://google.com"
-                  >
+                  <a>
                     Alfred K. Krogh
                   </a>
                   <br />
@@ -149,20 +147,19 @@ exports[`Snapshot UserTable Component 1`] = `
               </tr>
             </UserRow>
             <UserRow
+              key="3"
               row={
                 Object {
                   "edit_path": "http://google.com",
                   "email": "SilasLBertelsen@armyspy.com",
-                  "name1": "Silas L. Bertelsen",
-                  "per_id": 3,
+                  "id": 3,
+                  "name": "Silas L. Bertelsen",
                 }
               }
             >
               <tr>
                 <td>
-                  <a
-                    href="http://google.com"
-                  >
+                  <a>
                     Silas L. Bertelsen
                   </a>
                   <br />
@@ -173,20 +170,19 @@ exports[`Snapshot UserTable Component 1`] = `
               </tr>
             </UserRow>
             <UserRow
+              key="4"
               row={
                 Object {
                   "edit_path": "http://google.com",
                   "email": "MiaAJohnsen@dayrep.com",
-                  "name1": "Mia A. Johnsen",
-                  "per_id": 4,
+                  "id": 4,
+                  "name": "Mia A. Johnsen",
                 }
               }
             >
               <tr>
                 <td>
-                  <a
-                    href="http://google.com"
-                  >
+                  <a>
                     Mia A. Johnsen
                   </a>
                   <br />
@@ -196,35 +192,11 @@ exports[`Snapshot UserTable Component 1`] = `
                 </td>
               </tr>
             </UserRow>
-            <UserRow
-              row={
-                Object {
-                  "edit_path": "http://google.com",
-                  "email": "AlfredSSchou@jourrapide.com",
-                  "name1": "Alfred S. Schou",
-                  "per_id": 5,
-                }
-              }
-            >
-              <tr>
-                <td>
-                  <a
-                    href="http://google.com"
-                  >
-                    Alfred S. Schou
-                  </a>
-                  <br />
-                  <small>
-                    AlfredSSchou@jourrapide.com
-                  </small>
-                </td>
-              </tr>
-            </UserRow>
           </tbody>
         </table>
         <Pagination
           currentPageNumber={0}
-          totalNumberOfPages={2}
+          numberOfPages={3}
         >
           <ul
             className="pagination"
@@ -256,6 +228,21 @@ exports[`Snapshot UserTable Component 1`] = `
                   onClick={[Function]}
                 >
                   2
+                </button>
+              </li>
+            </Page>
+            <Page
+              key="2"
+              pageNumber={2}
+            >
+              <li
+                className="page-item mr-1"
+              >
+                <button
+                  className="page-link "
+                  onClick={[Function]}
+                >
+                  3
                 </button>
               </li>
             </Page>

@@ -1,6 +1,5 @@
 const initialState = {
-    currentPageNumber: 0,
-    totalNumberOfPages: 0
+    currentPageNumber: 0
   };
   
   export default function reducer(state = initialState, action) {
@@ -9,12 +8,6 @@ const initialState = {
         return {
           ...state,
           currentPageNumber: action.data,
-        };
-      }
-      case "SET_TOTAL_NUMBER_OF_PAGES": {
-        return {
-          ...state,
-          totalNumberOfPages: action.data,
         };
       }
       default:
