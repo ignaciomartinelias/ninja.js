@@ -1,10 +1,7 @@
 import React from "react";
-import { useSelector } from "react-redux";
 import Page from "./Page";
 
-const Pagination = ({numberOfPages}) => {
-  const currentPageNumber = useSelector(state => state.dataTableReducer.currentPageNumber);
-
+const Pagination = ({numberOfPages, currentPageNumber}) => {
   const pages = [...Array(numberOfPages)].map((i, pageNumber) => {
     return <Page key={pageNumber} pageNumber={pageNumber} />;
   });
