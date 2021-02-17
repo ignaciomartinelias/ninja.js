@@ -25,13 +25,6 @@ const DataTable = ({ rows, rowsPerPage = 40, handleSearch, RowToRender }) => {
     let rowsFound = rows;
     if (text) {
       rowsFound = handleSearch(rows, text);
-      // rowsFound = rows.filter(row => {
-      //   for (const key in row) {
-      //     if (row[key].toString().toLowerCase().includes(text.toLowerCase())) {
-      //       return row;
-      //     }
-      //   }
-      // });
     }
     setFilteredRows(rowsFound);
     store.dispatch(setCurrentPageNumber(0));

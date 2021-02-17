@@ -7,7 +7,7 @@ const Search = ({ onSearch }) => {
       <input
         type="search"
         className="form-control"
-        placeholder="Søg brugere"
+        placeholder="Search"
         onChange={onSearch} />
     </div>
   )
