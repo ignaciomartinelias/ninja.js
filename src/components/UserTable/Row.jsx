@@ -1,7 +1,6 @@
 import React from 'react'
 
 const UserRow = ({ row }) => {
-  console.log(row)
   return (
     <tr>
       <td>
